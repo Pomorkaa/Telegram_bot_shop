@@ -22,7 +22,7 @@ but_case_admin = ReplyKeyboardMarkup(resize_keyboard=True).add(but_load).add(but
 
 #получаем айди текущего модератора
 # @dp.message_handler(commands=['Модератор'], is_chat_admin=True )
-async def make_changes_command(message: types.Message):
+async def make_changes_command(message: types.Message):git a
     global ID
     ID =message.from_user.id
     await bot.send_message(message.from_user.id,'Что хозяин надо?', reply_markup=but_case_admin)

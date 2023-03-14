@@ -28,11 +28,3 @@ async def sql_read2():
 async def sql_delete_command(data):
     cur.execute('DELETE FROM menu WHERE name ==?',(data,))
     base.commit()
-
-    
-
-
-# # @dp.message_handler(commands=['Меню'])
-# async def pizza_menu_command(message: types.Message):
-#     for ret in sglite_db.cur.execute('SELECT * FROM menu').fetchall():
-#         await bot.send_photo(message.from_user.id, ret[0], f'{ret[1]}\nОписание: {ret[2]}\n Цена: {ret[-1]}')
