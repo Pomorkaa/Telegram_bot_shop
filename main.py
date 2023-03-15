@@ -1,5 +1,3 @@
-#telegram api key
-# 6128302810:AAFBv5UNfWP0qTPD4ZuvASDN_CujOru-C_I
 
 from aiogram import executor
 from create_bot import dp

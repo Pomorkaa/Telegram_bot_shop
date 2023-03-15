@@ -22,9 +22,9 @@ but_case_admin = ReplyKeyboardMarkup(resize_keyboard=True).add(but_load).add(but
 
 #получаем айди текущего модератора
 # @dp.message_handler(commands=['Модератор'], is_chat_admin=True )
-async def make_changes_command(message: types.Message):git a
+async def make_changes_command(message: types.Message):
     global ID
-    ID =message.from_user.id
+    ID = message.from_user.id
     await bot.send_message(message.from_user.id,'Что хозяин надо?', reply_markup=but_case_admin)
     await message.delete()
 
@@ -82,7 +82,7 @@ async def del_callback_run(callback_query: types.CallbackQuery):
 
 
 @dp.message_handler(commands='Удалить')
-async def del_item(message : types.Message):
+async def del_item(message: types.Message):
     if ID == message.from_user.id:
         read = await sglite_db.sql_read2()
         for ret in read:
